@@ -353,6 +353,27 @@ export default {
                     },
                   },
                   {
+                    label: '重装系统',
+                    permission: 'server_perform_rebuild_root',
+                    action: () => {
+                      this.createDialog('VmRebuildRootDialog', {
+                        data: [obj],
+                        columns: this.columns,
+                        list: this.list,
+                      })
+                    },
+                    meta: () => {
+                      const ret = {
+                        validate: false,
+                        tooltip: null,
+                      }
+                      if (commonUnabled(obj)) return ret
+                      ret.validate = cloudEnabled('rebuildRoot', obj)
+                      ret.tooltip = cloudUnabledTip('rebuildRoot', obj)
+                      return ret
+                    },
+                  },
+                  {
                     label: '更改项目',
                     action: () => {
                       this.createDialog('ChangeOwenrDialog', {
@@ -677,11 +698,11 @@ export default {
                   {
                     label: '绑定弹性公网IP',
                     action: () => {
-                      this.createDialog('VmBindEipDialog', {
-                        data: [obj],
-                        columns: this.columns,
-                        list: this.list,
-                      })
+                      // this.createDialog('VmResetPasswordDialog', {
+                      //   data: [obj],
+                      //   columns: this.columns,
+                      //   list: this.list,
+                      // })
                     },
                     meta: () => {
                       const ret = {
@@ -701,11 +722,11 @@ export default {
                   {
                     label: '解绑弹性公网IP',
                     action: () => {
-                      this.createDialog('VmUnbindEipDialog', {
-                        data: [obj],
-                        columns: this.columns,
-                        list: this.list,
-                      })
+                      // this.createDialog('VmResetPasswordDialog', {
+                      //   data: [obj],
+                      //   columns: this.columns,
+                      //   list: this.list,
+                      // })
                     },
                     meta: () => {
                       const ret = {
@@ -717,8 +738,8 @@ export default {
                         ret.tooltip = 'Public IP无法解绑'
                         return ret
                       }
-                      ret.validate = cloudEnabled('unbindEip', obj)
-                      ret.tooltip = cloudUnabledTip('unbindEip', obj)
+                      ret.validate = cloudUnabledTip('unbindEip', obj)
+                      ret.tooltip = cloudEnabled('unbindEip', obj)
                       return ret
                     },
                   },
@@ -730,11 +751,11 @@ export default {
                   {
                     label: '添加备份机',
                     action: () => {
-                      this.createDialog('VmAddBackupDialog', {
-                        data: [obj],
-                        columns: this.columns,
-                        list: this.list,
-                      })
+                      // this.createDialog('VmResetPasswordDialog', {
+                      //   data: [obj],
+                      //   columns: this.columns,
+                      //   list: this.list,
+                      // })
                     },
                     meta: () => {
                       const ret = {
@@ -760,19 +781,16 @@ export default {
                   {
                     label: '删除备份机',
                     action: () => {
-                      this.createDialog('VmDeleteBackupDialog', {
-                        data: [obj],
-                        columns: this.columns,
-                        list: this.list,
-                      })
+                      // this.createDialog('VmResetPasswordDialog', {
+                      //   data: [obj],
+                      //   columns: this.columns,
+                      //   list: this.list,
+                      // })
                     },
                     meta: () => {
                       const ret = {
                         validate: false,
                         tooltip: null,
-                      }
-                      if (!obj.backup_host_id) {
-                        return ret
                       }
                       if (!this.isAdminMode) {
                         ret.tooltip = '无权限操作'
@@ -789,19 +807,16 @@ export default {
                   {
                     label: '切换',
                     action: () => {
-                      this.createDialog('VmSwitchBackupDialog', {
-                        data: [obj],
-                        columns: this.columns,
-                        list: this.list,
-                      })
+                      // this.createDialog('VmResetPasswordDialog', {
+                      //   data: [obj],
+                      //   columns: this.columns,
+                      //   list: this.list,
+                      // })
                     },
                     meta: () => {
                       const ret = {
                         validate: false,
                         tooltip: null,
-                      }
-                      if (!obj.backup_host_id) {
-                        return ret
                       }
                       if (!this.isAdminMode) {
                         ret.tooltip = '无权限操作'
@@ -818,11 +833,11 @@ export default {
                   {
                     label: '迁移',
                     action: () => {
-                      this.createDialog('VmTransferDialog', {
-                        data: [obj],
-                        columns: this.columns,
-                        list: this.list,
-                      })
+                      // this.createDialog('VmResetPasswordDialog', {
+                      //   data: [obj],
+                      //   columns: this.columns,
+                      //   list: this.list,
+                      // })
                     },
                     meta: () => {
                       const ret = {
