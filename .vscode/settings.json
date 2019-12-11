@@ -1,7 +1,7 @@
 {
   "editor.tabSize": 2,
   "eslint.validate": [
-  "javascript",
+    "javascript",
     {
       "language": "html",
       "autoFix": true
