@@ -41,7 +41,7 @@
     "vxe-table": "^2.8.33",
     "vxe-table-plugin-antd": "^1.5.8",
     "xe-utils": "^2.3.0",
-    "xterm": "3.7.0"
+    "xterm": "3.8.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
