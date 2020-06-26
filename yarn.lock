@@ -6737,10 +6737,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jsrsasign@^8.0.12:
-  version "8.0.16"
-  resolved "https://registry.yarnpkg.com/jsrsasign/-/jsrsasign-8.0.16.tgz#ca5db63dd8613624136e691f8ea68545612ace70"
-  integrity sha512-4yR8Bm76RKlh+qYtS7m7F1wjKB2A0R0e0VxyMy10PJNEpb/UiXKS40QmU36nuUT7Ea4/cbv4HXu1Z9c91nwLow==
+jsrsasign@^8.0.19:
+  version "8.0.19"
+  resolved "https://registry.yarnpkg.com/jsrsasign/-/jsrsasign-8.0.19.tgz#c36260f103cc639a9202e5243d7544cde48d53a7"
+  integrity sha512-qf+F41huTh9ThXj5n3yfAJJRp8vx05JYbGlGvCjusYX50rsfqY6ASK08LCOutl0yA1BHIpGG8bd1w5x9aGy7Zg==
 
 killable@^1.0.1:
   version "1.0.1"
