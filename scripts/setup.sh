@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo SHELL $SHELL
+set -x
 
-function show_br_commit(){
+show_br_commit () {
   local path="$1"; shift
   local branch
   local commit
@@ -10,7 +10,7 @@ function show_br_commit(){
   (
     cd $path
     path=$(readlink -f $path 2>/dev/null || pwd)
-    repo=$(basename -s .git $(git config --get remote.origin.url))
+    repo=$(basename -s .git `git config --get remote.origin.url`)
     commit=$(git rev-parse --verify HEAD |cut -c 1-8)
     branch=$(git rev-parse --abbrev-ref HEAD)
     echo "repo: $repo; branch: $branch; commit: $commit; path: $path"
