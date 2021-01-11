@@ -1,4 +1,4 @@
-const logo = require('@scope/assets/images/onecloud.svg')
+const logo = require('@scope/assets/images/logo.png')
 
 export default {
   state: {
@@ -24,35 +24,35 @@ export default {
     oem: {},
   },
   getters: {
-    logo (state) {
+    logo(state) {
       return state.companyInfo.logo
     },
-    loginLogo (state) {
+    loginLogo(state) {
       return state.companyInfo.loginLogo
     },
-    copyright (state) {
+    copyright(state) {
       return state.companyInfo.copyright
     },
   },
   mutations: {
-    SET_COMPANY_INFO (state, payload) {
+    SET_COMPANY_INFO(state, payload) {
       state.companyInfo = payload
     },
   },
   actions: {
-    fetchCompayInfo ({ commit, state }) {
+    fetchCompayInfo({ commit, state }) {
       return Promise.resolve(state.companyInfo)
     },
-    fetchWorkflowStatistics () {
+    fetchWorkflowStatistics() {
       return Promise.resolve()
     },
-    fetchWorkflowEnabledKeys () {
+    fetchWorkflowEnabledKeys() {
       return Promise.resolve()
     },
-    fetchDictionary ({ commit }, payload) {
+    fetchDictionary({ commit }, payload) {
       return Promise.resolve()
     },
-    fetchOEM ({ commit }, payload) {
+    fetchOEM({ commit }, payload) {
       return Promise.resolve()
     },
   },

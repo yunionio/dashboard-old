@@ -12,11 +12,11 @@ const createThemeColorReplacerPlugin = require('./src/config/plugin.config')
 
 const PROXY_TIMEOUT = 1000 * 60 * 2
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-function fsExistsSync (path) {
+function fsExistsSync(path) {
   try {
     fs.accessSync(path, fs.F_OK)
   } catch (e) {
@@ -25,7 +25,7 @@ function fsExistsSync (path) {
   return true
 }
 
-function getModuleList () {
+function getModuleList() {
   return fs.readdirSync(resolve('./containers'))
 }
 
@@ -175,7 +175,7 @@ module.exports = {
     port: 8080,
     proxy: {
       '/api': {
-        target: 'https://127.0.0.1:3000',
+        target: 'https://10.127.247.4:443',
         ws: true,
         changeOrigin: true,
         proxyTimeout: PROXY_TIMEOUT,

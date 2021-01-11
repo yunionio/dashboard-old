@@ -61,6 +61,7 @@ module.exports = {
     }],
     'no-useless-catch': 0,
     'no-prototype-builtins': 0,
+    'space-before-function-paren': 'off',
   },
   overrides: [
     {
